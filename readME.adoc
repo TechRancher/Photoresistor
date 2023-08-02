@@ -1,0 +1,86 @@
+== Working With Photoresistors
+
+:Project: Using a photoresistor to read the resistance and have the reading turn on an LED accordingly.
+:Author: Jason Sikes
+:AKA: TechRancher
+:Email: https://id.arduino.cc/sikesjay
+:Date: August 02, 2023
+:Revision: 1
+
+Title of this project is: {project}
+
+Author is {author}
+
+Also known as: {aka}
+
+Written on: {date}
+
+Version: {revision}
+
+.Description of the project
+We will read the value of the photoresistor, then have a function called based
+off the value of the photoresistor. As the light that the photoresistor receives
+goes up the resistance goes down, but the voltage goes up. This is how we will
+make the decisions to call the right function to turn on the right color of LED.
+
+.Items Needed
+* One 5k Ohm resistor
+* Two 330 Ohm resistors
+* One Red LED
+* One Green LED
+* One Photoresistor
+* One Arduino R3 
+* One Breadboard
+* Nine jumper wires
+
+.Circuit Design
+On the breadboard I installed one of the photoresistor's leg at column 15 (Note:
+the photoresistor has no polarity) and the leg to column 17. I installed the left 
+leg of the 5k ohm resistor into column 17 and the other into column 21. I installed
+one leg of the 330 Ohm resistor into column 35 and the other leg into column 25 on 
+the other side of the ditch. I installed one of the legs of the other 330 Ohm 
+resistor into column 40 and the other leg into column 20 on the other side of the
+ditch. I installed the anode (long leg) of the green LED into column 25 (same as the
+330 Ohm leg column) and the cathode (shorter leg) into column 24. I then installed
+the red LED anode (long leg) into column 20 (the same as the other 330 Ohm resistor)
+and the cathode (shorter leg) into column 19 Now it is time to run the jumper wires. 
+I ran the GND from the Arduino R3 GND to the GND rail. Jumper wire from pin 2 on the
+Arduino to column 35 (the same as the 330 Ohm leg). Jumper wire 5V on the Arduino to
+column 15 (the same as the photoresistor leg). Jumper wire from pin A0 on the Arduino
+to column 17 (the same as the 5k Ohm resistor leg). I ran jumper wire from pin 4 on
+the Arduino to column 40 (same as one of the legs of the 330 Ohm resistor). I ran 
+jumper wire from GND on rail to column 21 and column 24 on the other side of the 
+ditch and to column 19 on the other side of the ditch. I had to jump to the right 
+side of the board on the GND rail with a jumper wire to feed to the right side of
+the board GND rail. This should close the circuit.
+
+.Thumbnail
+image:file:///home/jay/Arduino/practiceCode/Photoresistor/circuitLayout.png[
+"KiCad Schematic",
+link="file:///home/jay/Arduino/practiceCode/Photoresistor/circuitLayout.png"]
+
+
+.Code
+The code for this project is in the file called "Photoresistor.ino".
+
+.What To Expect
+Once the code is done and you upload to the Arduino, you are ready to see which LED
+light will light up. If your shop room has good lighting the green LED should light.
+Now take your finger and place it over the photoresistor, the closer you put it 
+towards the photoresistor the less light it can receive. This will increase the
+resistance of the photoresistor, which in turn will decrease the voltage and current.
+Our code will read this decrease in voltage and tell our redLED() to turn on the red
+LED. Now, when you move your finger away from the photoresistor, more light can make
+contact with the resistor and cause the resistance to decrease, while the voltage
+and current to increase. This will tell the greenLED() to run. This little project
+can be a great starting point to have the circuit power something when the light 
+outside is low or when it is high. Have fun with it and make something!
+
+.Licensing Of Code
+GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+
+.Contact Me
+If you have any questions feel free to contact me at: {email}
