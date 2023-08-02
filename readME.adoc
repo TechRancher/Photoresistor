@@ -55,9 +55,9 @@ side of the board on the GND rail with a jumper wire to feed to the right side o
 the board GND rail. This should close the circuit.
 
 .Thumbnail
-image:file:///home/jay/Arduino/practiceCode/Photoresistor/circuitLayout.png[
+image:https://github.com/TechRancher/Photoresistor/blob/main/circuitLayout.png[
 "KiCad Schematic",
-link="file:///home/jay/Arduino/practiceCode/Photoresistor/circuitLayout.png"]
+link="https://github.com/TechRancher/Photoresistor/blob/main/circuitLayout.png"]
 
 
 .Code
